@@ -7,11 +7,12 @@ filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 Bundle 'gmarik/vundle'
-Bundle 'kien/ctrlp.vim'
 "Other bundle"
+Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'kshenoy/vim-signature'
 Bundle 'vim-scripts/bufexplorer.zip'
+Bundle 'vim-scripts/taglist.vim'
 " required!
 filetype plugin indent on
 
@@ -22,8 +23,10 @@ set ignorecase  " Do case in sensitive matching with
 
 syntax on               " enable syntax
 
+set showcmd
 set showmatch  " Show matching brackets.
 set laststatus=2
+
 set ruler  " Show ruler
 set showcmd " Display an incomplete command in the lower right corner of the Vim window
 
@@ -37,9 +40,19 @@ set nolist " Display unprintable characters f12 - switches
 set listchars=tab:·\ ,eol:¶,trail:·,extends:»,precedes:« " Unprintable chars mapping
 
 
+" Gestion des onglets
+map <F2> <Esc>:tabprevious <CR>
+map <F3> <Esc>:tabnext <CR>
+set showtabline=2                   " always show the tabline
+
+
 " NERDTree configuration
 let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$']
 map <Leader>n :NERDTreeToggle<CR>
+
+
+map <Leader>; :TlistToggle<CR>
+let Tlist_Use_Right_Window   = 1
 
 " Delete all whitespace in end of line
 autocmd BufWritePre * :%s/\s\+$//e
