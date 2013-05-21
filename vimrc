@@ -37,21 +37,21 @@ set expandtab   " Make tabs into spaces (set by tabstop)
 set smarttab " Smarter tab levels
 
 set nolist " Display unprintable characters f12 - switches
-set listchars=tab:·\ ,eol:¶,trail:·,extends:»,precedes:« " Unprintable chars mapping
-
+set listchars=tab:→\ ,eol:↵,extends:≻,precedes:≺,trail:·,nbsp:␢ " Unprintable chars mapping
+map <F12> :set list!<CR>
 
 " Gestion des onglets
 map <F2> <Esc>:tabprevious <CR>
 map <F3> <Esc>:tabnext <CR>
-set showtabline=2                   " always show the tabline
+""set showtabline=2                   " always show the tabline
 
 
 " NERDTree configuration
 let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$']
-map <Leader>n :NERDTreeToggle<CR>
+map <F4> :NERDTreeToggle<CR>
 
 
-map <Leader>; :TlistToggle<CR>
+map <F5> :TlistToggle<CR>
 let Tlist_Use_Right_Window   = 1
 
 " Delete all whitespace in end of line
