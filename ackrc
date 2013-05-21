@@ -1,0 +1,6 @@
+# General Ack Settings
+# follow symlinks
+--follow
+
+--type-set=xsl=.xsl,.xslt
+--type-add=css=.less
