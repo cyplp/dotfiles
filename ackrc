@@ -3,4 +3,7 @@
 --follow
 
 --type-set=xsl=.xsl,.xslt
+
 --type-add=css=.less
+
+--type-set=yml=.yaml,.yml
