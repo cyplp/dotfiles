@@ -10,6 +10,7 @@ Bundle 'gmarik/vundle'
 "Other bundle"
 Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/nerdcommenter'
 Bundle 'kshenoy/vim-signature'
 Bundle 'vim-scripts/bufexplorer.zip'
 Bundle 'vim-scripts/taglist.vim'
@@ -35,6 +36,8 @@ set softtabstop=4
 set shiftwidth=4 " Set the default shift width for indents
 set expandtab   " Make tabs into spaces (set by tabstop)
 set smarttab " Smarter tab levels
+
+set smartcase
 
 set nolist " Display unprintable characters f12 - switches
 set listchars=tab:→\ ,eol:↵,extends:≻,precedes:≺,trail:·,nbsp:␢ " Unprintable chars mapping
